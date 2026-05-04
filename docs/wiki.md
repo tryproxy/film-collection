@@ -13,6 +13,8 @@
 - `ng g c shared/components/layout`
 - `ng g c shared/components/header`
 - `ng g c shared/components/footer`
+- `ng g c shared/components/main`
+- `ng g c features/home/movie-card`
 
 - `ng g s core/services/films`
 

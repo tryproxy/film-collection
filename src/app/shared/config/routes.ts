@@ -1,6 +1,6 @@
 export const ROUTES = {
   HOME: {
-    path: '/',
+    path: '',
   },
   DETAILS: {
     path: 'details/:id',
