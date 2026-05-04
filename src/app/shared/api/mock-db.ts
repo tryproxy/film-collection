@@ -1,4 +1,4 @@
-export const db_movies = [
+export const DB_MOVIES = [
   {
     id: 1,
     title: 'Interstellar',
