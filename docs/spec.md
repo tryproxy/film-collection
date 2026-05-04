@@ -173,7 +173,7 @@ Below is a checklist to help you verify your work before submission.
 - [ ] TypeScript strict mode enabled
 - [ ] No linter errors
 - [ ] Code is organized into logical folders
-- [ ] Project README is filled in (description, how to run)
+- [x] Project README is filled in (description, how to run)
 
 ---
 
@@ -208,3 +208,7 @@ Below is a checklist to help you verify your work before submission.
 To submit, provide a link to a **public GitHub repository** with your completed assignment. Make sure the project runs via `ng serve` without errors.
 
 After submission, you will be able to apply for a mentor.
+
+## Link
+
+[link](https://github.com/rolling-scopes-school/tasks/blob/master/angular/tasks/angular-intro-task/README.md)
