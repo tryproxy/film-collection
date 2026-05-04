@@ -135,16 +135,16 @@ Below is a checklist to help you verify your work before submission.
 
 ### Components
 
-- [ ] Film card accepts data via `input()`
+- [x] Film card accepts data via `input()`
 - [ ] Film card notifies parent via `output()`
-- [ ] Film list is rendered using `@for`
-- [ ] Conditional rendering via `@if` ("Nothing found")
+- [x] Film list is rendered using `@for`
+- [x] Conditional rendering via `@if` ("Nothing found")
 - [ ] Details page shows full film information
 - [ ] Header, Breadcrumbs, and Footer are present on every page
 
 ### Routing
 
-- [ ] At least 2 routes configured
+- [x] At least 2 routes configured
 - [ ] Navigation via `routerLink`
 - [ ] URL parameter is correctly read on the details page
 - [ ] Wildcard route is handled
@@ -163,10 +163,10 @@ Below is a checklist to help you verify your work before submission.
 
 ### Service and Signals
 
-- [ ] Service is registered globally
-- [ ] Data is stored in `signal()`
-- [ ] Filtering is implemented via `computed()`
-- [ ] Search by title works
+- [x] Service is registered globally
+- [x] Data is stored in `signal()`
+- [x] Filtering is implemented via `computed()`
+- [x] Search by title works
 
 ### Code Quality
 

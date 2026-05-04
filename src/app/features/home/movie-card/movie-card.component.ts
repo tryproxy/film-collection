@@ -12,8 +12,6 @@ import { NgOptimizedImage } from '@angular/common';
       <p>{{ movie().year }}</p>
       <p>{{ movie().genre }}</p>
       <p>{{ movie().rating }}</p>
-      <p>{{ movie().duration }}</p>
-      <p>{{ movie().description }}</p>
       <img [ngSrc]="movie().posterUrl" alt="{{ movie().title }}" fill />
       <p>{{ movie().isFavorite }}</p>
     </article>
