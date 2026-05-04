@@ -12,7 +12,7 @@ import { MovieCardComponent } from './movie-card/movie-card.component';
       @if (!errorMovies) {
         @for (movie of movies; track movie.id) {
           <div>{{ movie.title }}</div>
-          <app-movie-card />
+          <app-movie-card [movie]="movie" />
         }
       } @else {
         <div>{{ errorMovies }}</div>
