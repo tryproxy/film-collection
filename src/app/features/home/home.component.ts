@@ -1,6 +1,5 @@
 import { Component, computed, inject, signal } from '@angular/core';
 import { FilmsService } from '../../core/services/films.service';
-import type { Movie } from '../../shared/model/types';
 import { MovieCardComponent } from './movie-card/movie-card.component';
 import { FormsModule } from '@angular/forms';
 
@@ -19,14 +18,15 @@ import { FormsModule } from '@angular/forms';
         />
       </div>
       <div>
-        @if (errorMoviesDb) {
-          <div>{{ errorMoviesDb }}</div>
+        @if (error()) {
+          <div>{{ error() }}</div>
         } @else if (movies().length === 0) {
           <div>Nothing found</div>
         } @else {
           @for (movie of movies(); track movie.id) {
-            <div>{{ movie.title }}</div>
-            <app-movie-card [movie]="movie" />
+            <ul>
+              <li><app-movie-card [movie]="movie" /></li>
+            </ul>
           }
         }
       </div>
@@ -37,20 +37,11 @@ export class HomeComponent {
   private readonly filmService = inject(FilmsService);
   public readonly search = signal('');
 
-  public errorMoviesDb = '';
-  public readonly movies = computed(() =>
-    this.loadMovies().filter(({ title }) =>
-      title.toLowerCase().includes(this.search().trim().toLowerCase()),
-    ),
-  );
+  public error = this.filmService.error;
 
-  private loadMovies(): Movie[] {
-    try {
-      return this.filmService.listMovies();
-    } catch (err) {
-      this.errorMoviesDb = err instanceof Error ? err.message : 'Failed to list movies';
+  public readonly movies = computed(() => {
+    const query = this.search().trim().toLowerCase();
 
-      return [];
-    }
-  }
+    return this.filmService.movies().filter(({ title }) => title.toLowerCase().includes(query));
+  });
 }
