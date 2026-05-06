@@ -16,7 +16,7 @@ export class FilmsService {
   public readonly movies = this.moviesState.asReadonly();
   public readonly error = this.errorState.asReadonly();
 
-  public readonly listFavoriteMovies = computed(() =>
+  public readonly favoriteMovies = computed(() =>
     this.moviesState().filter(({ isFavorite }) => isFavorite),
   );
 

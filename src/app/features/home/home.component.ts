@@ -20,10 +20,10 @@ import { FormsModule } from '@angular/forms';
       <div>
         @if (error()) {
           <div>{{ error() }}</div>
-        } @else if (movies().length === 0) {
+        } @else if (filteredMovies().length === 0) {
           <div>Nothing found</div>
         } @else {
-          @for (movie of movies(); track movie.id) {
+          @for (movie of filteredMovies(); track movie.id) {
             <ul>
               <li><app-movie-card [movie]="movie" /></li>
             </ul>
@@ -39,7 +39,7 @@ export class HomeComponent {
 
   public error = this.filmService.error;
 
-  public readonly movies = computed(() => {
+  public readonly filteredMovies = computed(() => {
     const query = this.search().trim().toLowerCase();
 
     return this.filmService.movies().filter(({ title }) => title.toLowerCase().includes(query));
