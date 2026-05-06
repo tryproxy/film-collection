@@ -1,25 +1,31 @@
 import type { Routes } from '@angular/router';
-import { HomeComponent } from './features/home/home.component';
-import { LayoutComponent } from './shared/components/layout/layout.component';
+import { HomeComponent as HomePage } from './features/home/home.component';
+import { LayoutComponent as Layout } from './shared/components/layout/layout.component';
 import { ROUTES } from './shared/config/routes';
 
-const filmDetails = () =>
+const filmDetailsPage = () =>
   import('./features/film-details/film-details.component').then(m => m.FilmDetailsComponent);
+const notFoundPage = () =>
+  import('./features/not-found/not-found.component').then(m => m.NotFoundComponent);
 
 export const routes: Routes = [
   {
     path: '',
-    component: LayoutComponent,
+    component: Layout,
     children: [
       {
         path: ROUTES.HOME.path,
         title: 'Library',
-        component: HomeComponent,
+        component: HomePage,
       },
       {
         path: ROUTES.DETAILS.path,
         title: 'Movie Details',
-        loadComponent: filmDetails,
+        loadComponent: filmDetailsPage,
+      },
+      {
+        path: '**',
+        loadComponent: notFoundPage,
       },
     ],
   },
