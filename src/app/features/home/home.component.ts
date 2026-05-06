@@ -23,11 +23,11 @@ import { FormsModule } from '@angular/forms';
         } @else if (filteredMovies().length === 0) {
           <div>Nothing found</div>
         } @else {
-          @for (movie of filteredMovies(); track movie.id) {
-            <ul>
+          <ul>
+            @for (movie of filteredMovies(); track movie.id) {
               <li><app-movie-card [movie]="movie" /></li>
-            </ul>
-          }
+            }
+          </ul>
         }
       </div>
     </div>

@@ -16,6 +16,7 @@
 - `ng g c shared/components/main`
 - `ng g c features/home/movie-card`
 - `ng g c features/not-found`
+- `ng g c features/about`
 
 - `ng g s core/services/films`
 

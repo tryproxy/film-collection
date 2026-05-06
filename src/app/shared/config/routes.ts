@@ -7,4 +7,8 @@ export const ROUTES = {
     path: 'details/:id',
     to: '/details',
   },
+  ABOUT: {
+    path: 'about',
+    to: '/about',
+  },
 };

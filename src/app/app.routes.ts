@@ -4,9 +4,15 @@ import { LayoutComponent as Layout } from './shared/components/layout/layout.com
 import { ROUTES } from './shared/config/routes';
 
 const filmDetailsPage = () =>
-  import('./features/film-details/film-details.component').then(m => m.FilmDetailsComponent);
+  import('./features/film-details/film-details.component').then(
+    ({ FilmDetailsComponent }) => FilmDetailsComponent,
+  );
 const notFoundPage = () =>
-  import('./features/not-found/not-found.component').then(m => m.NotFoundComponent);
+  import('./features/not-found/not-found.component').then(
+    ({ NotFoundComponent }) => NotFoundComponent,
+  );
+const aboutPage = () =>
+  import('./features/about/about.component').then(({ AboutComponent }) => AboutComponent);
 
 export const routes: Routes = [
   {
@@ -22,6 +28,11 @@ export const routes: Routes = [
         path: ROUTES.DETAILS.path,
         title: 'Movie Details',
         loadComponent: filmDetailsPage,
+      },
+      {
+        path: ROUTES.ABOUT.path,
+        title: 'About',
+        loadComponent: aboutPage,
       },
       {
         path: '**',

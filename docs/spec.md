@@ -139,15 +139,15 @@ Below is a checklist to help you verify your work before submission.
 - [ ] Film card notifies parent via `output()`
 - [x] Film list is rendered using `@for`
 - [x] Conditional rendering via `@if` ("Nothing found")
-- [ ] Details page shows full film information
+- [x] Details page shows full film information
 - [ ] Header, Breadcrumbs, and Footer are present on every page
 
 ### Routing
 
 - [x] At least 2 routes configured
-- [ ] Navigation via `routerLink`
-- [ ] URL parameter is correctly read on the details page
-- [ ] Wildcard route is handled
+- [x] Navigation via `routerLink`
+- [x] URL parameter is correctly read on the details page
+- [x] Wildcard route is handled
 
 ### Directive
 
@@ -170,9 +170,9 @@ Below is a checklist to help you verify your work before submission.
 
 ### Code Quality
 
-- [ ] TypeScript strict mode enabled
+- [x] TypeScript strict mode enabled
 - [ ] No linter errors
-- [ ] Code is organized into logical folders
+- [x] Code is organized into logical folders
 - [x] Project README is filled in (description, how to run)
 
 ---

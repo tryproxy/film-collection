@@ -1,9 +1,24 @@
 import { Component } from '@angular/core';
+import { RouterLink } from '@angular/router';
+import { ROUTES } from '../../config/routes';
 
 @Component({
   selector: 'app-header',
-  imports: [],
-  template: ` <p>header works!</p> `,
+  imports: [RouterLink],
+  template: `
+    <nav>
+      <ul>
+        <li>
+          <a [routerLink]="[ROUTES.HOME.to]">Home</a>
+        </li>
+        <li>
+          <a [routerLink]="[ROUTES.ABOUT.to]">About</a>
+        </li>
+      </ul>
+    </nav>
+  `,
   styleUrl: './header.component.css',
 })
-export class HeaderComponent {}
+export class HeaderComponent {
+  public readonly ROUTES = ROUTES;
+}
