@@ -1,0 +1,25 @@
+.home-container {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  max-width: 1200px;
+  padding: 16px;
+  margin: 0 auto;
+}
+
+.home-search {
+  width: 100%;
+}
+input {
+  width: 100%;
+}
+
+.movie-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 16px;
+}
+
+.movie-grid__item {
+  display: flex;
+}

@@ -19,14 +19,16 @@ import { Router } from '@angular/router';
           [attr.aria-pressed]="movie().isFavorite"
           (click)="onFavoriteClick($event)"
         >
-          <span>{{ movie().isFavorite ? 'Added' : 'Add' }}</span>
+          {{ movie().isFavorite ? 'Added' : 'Add' }}
         </button>
       </div>
-      <h2>{{ movie().title }}</h2>
-      <p>{{ movie().year }}</p>
-      <p>{{ movie().genre }}</p>
-      <p>{{ movie().rating }}</p>
-      <p>{{ movie().isFavorite }}</p>
+      <div class="movie-card__content">
+        <h2>{{ movie().title }}</h2>
+        <p>Year: {{ movie().year }}</p>
+        <p>Genre: {{ movie().genre }}</p>
+        <p>Rating: {{ movie().rating }}</p>
+        <p>Favorite: {{ movie().isFavorite ? 'Yes' : 'No' }}</p>
+      </div>
     </article>
   `,
   host: {

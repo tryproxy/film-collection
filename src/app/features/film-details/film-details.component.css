@@ -1,0 +1,37 @@
+:host {
+  display: block;
+}
+
+.film-details {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 16px;
+}
+
+.film-details__poster {
+  width: 300px;
+  max-width: 100%;
+}
+
+.film-details__content {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  gap: 8px;
+  min-width: 280px;
+}
+
+.film-details__favorite {
+  display: flex;
+  gap: 8px;
+  align-items: center;
+}
+
+.film-details__back {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 16px 16px;
+}

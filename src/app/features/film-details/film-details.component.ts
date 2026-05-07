@@ -11,21 +11,23 @@ import { HumanReadableDurationTimeFormatPipe } from './human-readable-duration-t
   styleUrl: './film-details.component.css',
   template: `
     @if (movie(); as movie) {
-      <section>
-        <img [src]="movie.posterUrl" [alt]="movie.title" />
-        <h1>{{ movie.title }}</h1>
-        <p>Year: {{ movie.year }}</p>
-        <p>Genre: {{ movie.genre }}</p>
-        <p>Rating: {{ movie.rating }}</p>
-        <p>Duration: {{ movie.duration | humanReadableDurationTimeFormat }}</p>
-        <p>{{ movie.description }}</p>
-        <div>
-          <button type="button" (click)="toggleFavorite(movie.id)">Favorite:</button>
-          {{ movie.isFavorite ? 'Yes' : 'No' }}
+      <section class="film-details">
+        <img class="film-details__poster" [src]="movie.posterUrl" [alt]="movie.title" />
+        <div class="film-details__content">
+          <h1>{{ movie.title }}</h1>
+          <p>Year: {{ movie.year }}</p>
+          <p>Genre: {{ movie.genre }}</p>
+          <p>Rating: {{ movie.rating }}</p>
+          <p>Duration: {{ movie.duration | humanReadableDurationTimeFormat }}</p>
+          <p>{{ movie.description }}</p>
+          <div class="film-details__favorite">
+            <button type="button" (click)="toggleFavorite(movie.id)">Favorite</button>
+            <span>{{ movie.isFavorite ? 'Yes' : 'No' }}</span>
+          </div>
         </div>
       </section>
 
-      <nav>
+      <nav class="film-details__back">
         <a [routerLink]="ROUTES.HOME.to">Go back</a>
       </nav>
     } @else {

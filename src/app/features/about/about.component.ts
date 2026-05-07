@@ -5,7 +5,12 @@ import { BREADCRUMBS } from '../../shared/config/routes';
 @Component({
   selector: 'app-about',
   imports: [],
-  template: ` <p>about works!</p> `,
+  template: `
+    <section class="about">
+      <h1>About Page</h1>
+      <p>Nothing to see here</p>
+    </section>
+  `,
   styleUrl: './about.component.css',
 })
 export class AboutComponent {

@@ -11,8 +11,8 @@ import { AutoFocusDirective } from './auto-focus.directive';
   imports: [MovieCardComponent, FormsModule, AutoFocusDirective],
   styleUrl: './home.component.css',
   template: `
-    <div>
-      <div>
+    <div class="home-container">
+      <div class="home-search">
         <input
           appAutoFocus
           type="text"
@@ -21,15 +21,15 @@ import { AutoFocusDirective } from './auto-focus.directive';
           placeholder="Search movies..."
         />
       </div>
-      <div>
+      <div class="home-content">
         @if (error()) {
           <div>{{ error() }}</div>
         } @else if (filteredMovies().length === 0) {
           <div>Nothing found</div>
         } @else {
-          <ul>
+          <ul class="movie-grid">
             @for (movie of filteredMovies(); track movie.id) {
-              <li>
+              <li class="movie-grid__item">
                 <app-movie-card [movie]="movie" (toggleFavorite)="toggleFavorite($event)" />
               </li>
             }

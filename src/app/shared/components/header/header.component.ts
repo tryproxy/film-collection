@@ -6,12 +6,12 @@ import { ROUTES } from '../../config/routes';
   selector: 'app-header',
   imports: [RouterLink],
   template: `
-    <nav>
-      <ul>
-        <li>
+    <nav class="nav">
+      <ul class="nav__list">
+        <li class="nav__item">
           <a [routerLink]="[ROUTES.HOME.to]">Home</a>
         </li>
-        <li>
+        <li class="nav__item">
           <a [routerLink]="[ROUTES.ABOUT.to]">About</a>
         </li>
       </ul>

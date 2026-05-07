@@ -1,5 +1,11 @@
+:host {
+  display: block;
+}
+
 .breadcrumbs-nav {
-  color: black;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 16px 16px;
 }
 
 .breadcrumbs-nav__last {

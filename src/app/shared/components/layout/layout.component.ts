@@ -9,12 +9,10 @@ import { BreadcrumbsComponent } from '../breadcrumbs/breadcrumbs.component';
   imports: [HeaderComponent, FooterComponent, MainComponent, BreadcrumbsComponent],
   styleUrl: './layout.component.css',
   template: `
-    <div>
-      <app-header />
-      <app-breadcrumbs />
-      <app-main />
-      <app-footer />
-    </div>
+    <app-header />
+    <app-breadcrumbs />
+    <app-main />
+    <app-footer />
   `,
 })
 export class LayoutComponent {}

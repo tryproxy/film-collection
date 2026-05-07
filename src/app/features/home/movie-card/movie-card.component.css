@@ -1,11 +1,13 @@
 :host {
   display: block;
-  position: relative;
   cursor: pointer;
 }
 
-/*.movie-card {
-}*/
+.movie-card {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
 
 .movie-card__poster {
   position: relative;
@@ -18,12 +20,10 @@
   position: absolute;
   top: 8px;
   right: 8px;
-  z-index: 1;
-  cursor: pointer;
-  background-color: rgba(0, 0, 0, 0.3);
-  color: white;
 }
 
-.movie-card__favorite:hover {
-  background-color: rgba(0, 0, 0, 0.4);
+.movie-card__content {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
 }
