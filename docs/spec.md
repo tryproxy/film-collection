@@ -151,9 +151,9 @@ Below is a checklist to help you verify your work before submission.
 
 ### Directive
 
-- [ ] Custom attribute directive created as standalone
-- [ ] Sets focus on the element when it appears
-- [ ] Applied to the search field
+- [x] Custom attribute directive created as standalone
+- [x] Sets focus on the element when it appears
+- [x] Applied to the search field
 
 ### Pipe
 
@@ -171,7 +171,7 @@ Below is a checklist to help you verify your work before submission.
 ### Code Quality
 
 - [x] TypeScript strict mode enabled
-- [ ] No linter errors
+- [x] No linter errors
 - [x] Code is organized into logical folders
 - [x] Project README is filled in (description, how to run)
 
