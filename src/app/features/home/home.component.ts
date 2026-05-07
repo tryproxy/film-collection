@@ -25,7 +25,9 @@ import { FormsModule } from '@angular/forms';
         } @else {
           <ul>
             @for (movie of filteredMovies(); track movie.id) {
-              <li><app-movie-card [movie]="movie" /></li>
+              <li>
+                <app-movie-card [movie]="movie" (toggleFavorite)="toggleFavorite($event)" />
+              </li>
             }
           </ul>
         }
@@ -44,4 +46,8 @@ export class HomeComponent {
 
     return this.filmService.movies().filter(({ title }) => title.toLowerCase().includes(query));
   });
+
+  public readonly toggleFavorite = (id: number) => {
+    this.filmService.toggleFavoriteMovieById(id);
+  };
 }

@@ -1,10 +1,11 @@
 import { Component, computed, inject } from '@angular/core';
 import { FilmsService } from '../../core/services/films.service';
-import { ActivatedRoute } from '@angular/router';
+import { ActivatedRoute, RouterLink } from '@angular/router';
+import { ROUTES } from '../../shared/config/routes';
 
 @Component({
   selector: 'app-film-details',
-  imports: [],
+  imports: [RouterLink],
   styleUrl: './film-details.component.css',
   template: `
     @if (movie(); as movie) {
@@ -16,8 +17,15 @@ import { ActivatedRoute } from '@angular/router';
         <p>Rating: {{ movie.rating }}</p>
         <p>Duration: {{ movie.duration }}</p>
         <p>{{ movie.description }}</p>
-        <p>Favorite: {{ movie.isFavorite ? 'Yes' : 'No' }}</p>
+        <div>
+          <button type="button" (click)="toggleFavorite(movie.id)">Favorite:</button>
+          {{ movie.isFavorite ? 'Yes' : 'No' }}
+        </div>
       </section>
+
+      <nav>
+        <a [routerLink]="ROUTES.HOME.to">Go back</a>
+      </nav>
     } @else {
       <p>Movie si not found.</p>
     }
@@ -26,6 +34,8 @@ import { ActivatedRoute } from '@angular/router';
 export class FilmDetailsComponent {
   private readonly router = inject(ActivatedRoute);
   private readonly filmService = inject(FilmsService);
+
+  public readonly ROUTES = ROUTES;
 
   public readonly movie = computed(() => {
     const id = Number(this.router.snapshot.paramMap.get('id'));
@@ -36,14 +46,8 @@ export class FilmDetailsComponent {
 
     return this.filmService.retrieveMovieById(id);
   });
-}
 
-// id: number;
-// title: string;
-// year: number;
-// genre: string;
-// rating: number;
-// duration: number;
-// description: string;
-// posterUrl: string;
-// isFavorite: boolean;
+  public toggleFavorite(id: number) {
+    this.filmService.toggleFavoriteMovieById(id);
+  }
+}

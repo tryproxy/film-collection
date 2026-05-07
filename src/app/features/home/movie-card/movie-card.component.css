@@ -1,4 +1,29 @@
 :host {
   display: block;
   position: relative;
+  cursor: pointer;
+}
+
+/*.movie-card {
+}*/
+
+.movie-card__poster {
+  position: relative;
+  overflow: hidden;
+  inline-size: 200px;
+  block-size: 300px;
+}
+
+.movie-card__favorite {
+  position: absolute;
+  top: 8px;
+  right: 8px;
+  z-index: 1;
+  cursor: pointer;
+  background-color: rgba(0, 0, 0, 0.3);
+  color: white;
+}
+
+.movie-card__favorite:hover {
+  background-color: rgba(0, 0, 0, 0.4);
 }

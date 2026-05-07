@@ -136,7 +136,7 @@ Below is a checklist to help you verify your work before submission.
 ### Components
 
 - [x] Film card accepts data via `input()`
-- [ ] Film card notifies parent via `output()`
+- [x] Film card notifies parent via `output()`
 - [x] Film list is rendered using `@for`
 - [x] Conditional rendering via `@if` ("Nothing found")
 - [x] Details page shows full film information
