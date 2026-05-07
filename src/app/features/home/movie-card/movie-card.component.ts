@@ -23,11 +23,41 @@ import { Router } from '@angular/router';
         </button>
       </div>
       <div class="movie-card__content">
-        <h2>{{ movie().title }}</h2>
-        <p>Year: {{ movie().year }}</p>
-        <p>Genre: {{ movie().genre }}</p>
-        <p>Rating: {{ movie().rating }}</p>
-        <p>Favorite: {{ movie().isFavorite ? 'Yes' : 'No' }}</p>
+        <h2 class="movie-card__title">{{ movie().title }}</h2>
+        <div class="movie-card__meta">
+          <p>
+            <span>Year</span><span>{{ movie().year }}</span>
+          </p>
+          <p>
+            <span>Genre</span><span>{{ movie().genre }}</span>
+          </p>
+          <p>
+            <span>Rating</span><span>{{ movie().rating }}</span>
+          </p>
+          <p>
+            <span>Favorite</span><span>{{ movie().isFavorite ? 'Yes' : 'No' }}</span>
+          </p>
+        </div>
+        <div class="movie-card__actions">
+          <a
+            data-card-action
+            [href]="movie().imdbUrl"
+            target="_blank"
+            rel="noopener noreferrer"
+            (click)="$event.stopPropagation()"
+          >
+            IMDB
+          </a>
+          <a
+            data-card-action
+            [href]="movie().watchUrl"
+            target="_blank"
+            rel="noopener noreferrer"
+            (click)="$event.stopPropagation()"
+          >
+            Watch
+          </a>
+        </div>
       </div>
     </article>
   `,

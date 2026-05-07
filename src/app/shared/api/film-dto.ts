@@ -7,5 +7,7 @@ export interface MovieDTO {
   duration: number;
   description: string;
   posterUrl: string;
+  imdbUrl: string;
+  watchUrl: string;
   isFavorite: boolean;
 }
