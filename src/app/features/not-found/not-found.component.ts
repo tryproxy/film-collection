@@ -5,7 +5,7 @@ import { Component } from '@angular/core';
   imports: [],
   template: `
     <section class="not-found">
-      <p>Nothing found</p>
+      <p>This page doesn't exist</p>
     </section>
   `,
   styleUrl: './not-found.component.css',

@@ -3,10 +3,15 @@
   cursor: pointer;
 }
 
+:host:hover .movie-card {
+  opacity: 0.8;
+}
+
 .movie-card {
   display: flex;
   flex-direction: column;
   gap: 8px;
+  transition: opacity 200ms ease-in;
 }
 
 .movie-card__poster {
@@ -21,6 +26,12 @@
   position: absolute;
   top: 8px;
   right: 8px;
+  min-inline-size: 56px;
+  background: #f5c518;
+  border: 0;
+  border-radius: 999px;
+  color: black;
+  padding: 2px 8px;
 }
 
 .movie-card__content {

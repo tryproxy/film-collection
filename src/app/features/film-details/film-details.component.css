@@ -14,6 +14,7 @@
 .film-details__poster {
   width: 300px;
   max-width: 100%;
+  border-radius: 4px;
 }
 
 .film-details__content {

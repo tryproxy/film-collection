@@ -9,6 +9,6 @@ html {
 body {
   min-height: 100vh;
   margin: 0;
-  background: linear-gradient(180deg, #1a1c20 0%, #242830 45%, #2f3440 100%);
+  background: linear-gradient(90deg, #1a1c20 0%, #242830 90%, #2f3440 200%);
   color: #f2f2f2;
 }
