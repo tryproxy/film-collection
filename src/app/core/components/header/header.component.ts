@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { RouterLink } from '@angular/router';
-import { ROUTES } from '../../config/routes';
+import { ROUTES } from '../../../shared/config/routes';
 
 @Component({
   selector: 'app-header',

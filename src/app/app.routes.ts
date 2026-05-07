@@ -1,6 +1,6 @@
 import type { Routes } from '@angular/router';
 import { HomeComponent as HomePage } from './features/home/home.component';
-import { LayoutComponent as Layout } from './shared/components/layout/layout.component';
+import { LayoutComponent as Layout } from './core/components/layout/layout.component';
 import { ROUTES } from './shared/config/routes';
 
 const detailsPage = () =>
