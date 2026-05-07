@@ -2,6 +2,8 @@ import { Component, computed, inject, signal } from '@angular/core';
 import { FilmsService } from '../../core/services/films.service';
 import { MovieCardComponent } from './movie-card/movie-card.component';
 import { FormsModule } from '@angular/forms';
+import { BreadcrumbsService } from '../../core/services/breadcrumbs.service';
+import { BREADCRUMBS } from '../../shared/config/routes';
 
 @Component({
   selector: 'app-home',
@@ -37,9 +39,10 @@ import { FormsModule } from '@angular/forms';
 })
 export class HomeComponent {
   private readonly filmService = inject(FilmsService);
-  public readonly search = signal('');
+  private readonly breadcrumbsService = inject(BreadcrumbsService);
 
-  public error = this.filmService.error;
+  public readonly search = signal('');
+  public readonly error = this.filmService.error;
 
   public readonly filteredMovies = computed(() => {
     const query = this.search().trim().toLowerCase();
@@ -47,7 +50,11 @@ export class HomeComponent {
     return this.filmService.movies().filter(({ title }) => title.toLowerCase().includes(query));
   });
 
-  public readonly toggleFavorite = (id: number) => {
+  public constructor() {
+    this.breadcrumbsService.setBreadcrumbs(BREADCRUMBS.home());
+  }
+
+  public toggleFavorite(id: number) {
     this.filmService.toggleFavoriteMovieById(id);
-  };
+  }
 }

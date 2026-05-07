@@ -37,8 +37,9 @@ export class MovieCardComponent {
   private readonly router = inject(Router);
 
   public readonly movie = input.required<Movie>();
-  public readonly ROUTES = ROUTES;
   public readonly toggleFavorite = output<number>();
+
+  public readonly ROUTES = ROUTES;
 
   public onFavoriteClick(event: MouseEvent): void {
     event.stopPropagation();

@@ -1,7 +1,8 @@
 import { Component, computed, inject } from '@angular/core';
 import { FilmsService } from '../../core/services/films.service';
 import { ActivatedRoute, RouterLink } from '@angular/router';
-import { ROUTES } from '../../shared/config/routes';
+import { BREADCRUMBS, ROUTES } from '../../shared/config/routes';
+import { BreadcrumbsService } from '../../core/services/breadcrumbs.service';
 
 @Component({
   selector: 'app-film-details',
@@ -34,6 +35,7 @@ import { ROUTES } from '../../shared/config/routes';
 export class FilmDetailsComponent {
   private readonly router = inject(ActivatedRoute);
   private readonly filmService = inject(FilmsService);
+  private readonly breadcrumbsService = inject(BreadcrumbsService);
 
   public readonly ROUTES = ROUTES;
 
@@ -46,6 +48,16 @@ export class FilmDetailsComponent {
 
     return this.filmService.retrieveMovieById(id);
   });
+
+  public constructor() {
+    const movie = this.movie();
+
+    if (!movie) {
+      return;
+    }
+
+    this.breadcrumbsService.setBreadcrumbs(BREADCRUMBS.details(movie.id, movie.title));
+  }
 
   public toggleFavorite(id: number) {
     this.filmService.toggleFavoriteMovieById(id);

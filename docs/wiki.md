@@ -17,8 +17,10 @@
 - `ng g c features/home/movie-card`
 - `ng g c features/not-found`
 - `ng g c features/about`
+- `ng g c shared/components/breadcrumbs`
 
 - `ng g s core/services/films`
+- `ng g s core/services/breadcrumbs`
 
 ## Essentials
 

@@ -3,7 +3,7 @@ import { HomeComponent as HomePage } from './features/home/home.component';
 import { LayoutComponent as Layout } from './shared/components/layout/layout.component';
 import { ROUTES } from './shared/config/routes';
 
-const filmDetailsPage = () =>
+const detailsPage = () =>
   import('./features/film-details/film-details.component').then(
     ({ FilmDetailsComponent }) => FilmDetailsComponent,
   );
@@ -21,17 +21,17 @@ export const routes: Routes = [
     children: [
       {
         path: ROUTES.HOME.path,
-        title: 'Library',
+        title: ROUTES.HOME.meta.title,
         component: HomePage,
       },
       {
         path: ROUTES.DETAILS.path,
-        title: 'Movie Details',
-        loadComponent: filmDetailsPage,
+        title: ROUTES.DETAILS.meta.title,
+        loadComponent: detailsPage,
       },
       {
         path: ROUTES.ABOUT.path,
-        title: 'About',
+        title: ROUTES.ABOUT.meta.title,
         loadComponent: aboutPage,
       },
       {
