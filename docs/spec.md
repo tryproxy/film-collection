@@ -140,7 +140,7 @@ Below is a checklist to help you verify your work before submission.
 - [x] Film list is rendered using `@for`
 - [x] Conditional rendering via `@if` ("Nothing found")
 - [x] Details page shows full film information
-- [ ] Header, Breadcrumbs, and Footer are present on every page
+- [x] Header, Breadcrumbs, and Footer are present on every page
 
 ### Routing
 
@@ -157,9 +157,9 @@ Below is a checklist to help you verify your work before submission.
 
 ### Pipe
 
-- [ ] Custom pipe created as standalone
-- [ ] Converts minutes into a human-readable duration format
-- [ ] Used in the template of at least one component
+- [x] Custom pipe created as standalone
+- [x] Converts minutes into a human-readable duration format
+- [x] Used in the template of at least one component
 
 ### Service and Signals
 

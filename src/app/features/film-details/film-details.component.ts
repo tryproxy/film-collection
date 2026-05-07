@@ -3,10 +3,11 @@ import { FilmsService } from '../../core/services/films.service';
 import { ActivatedRoute, RouterLink } from '@angular/router';
 import { BREADCRUMBS, ROUTES } from '../../shared/config/routes';
 import { BreadcrumbsService } from '../../core/services/breadcrumbs.service';
+import { HumanReadableDurationTimeFormatPipe } from './human-readable-duration-time-format.pipe';
 
 @Component({
   selector: 'app-film-details',
-  imports: [RouterLink],
+  imports: [RouterLink, HumanReadableDurationTimeFormatPipe],
   styleUrl: './film-details.component.css',
   template: `
     @if (movie(); as movie) {
@@ -16,7 +17,7 @@ import { BreadcrumbsService } from '../../core/services/breadcrumbs.service';
         <p>Year: {{ movie.year }}</p>
         <p>Genre: {{ movie.genre }}</p>
         <p>Rating: {{ movie.rating }}</p>
-        <p>Duration: {{ movie.duration }}</p>
+        <p>Duration: {{ movie.duration | humanReadableDurationTimeFormat }}</p>
         <p>{{ movie.description }}</p>
         <div>
           <button type="button" (click)="toggleFavorite(movie.id)">Favorite:</button>

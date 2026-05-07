@@ -22,6 +22,8 @@
 - `ng g s core/services/films`
 - `ng g s core/services/breadcrumbs`
 
+- `ng g pipe features/film-details/human-readable-duration-time-format`
+
 ## Essentials
 
 ### routing
