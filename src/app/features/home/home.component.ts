@@ -4,15 +4,17 @@ import { MovieCardComponent } from './movie-card/movie-card.component';
 import { FormsModule } from '@angular/forms';
 import { BreadcrumbsService } from '../../core/services/breadcrumbs.service';
 import { BREADCRUMBS } from '../../shared/config/routes';
+import { AutoFocusDirective } from './auto-focus.directive';
 
 @Component({
   selector: 'app-home',
-  imports: [MovieCardComponent, FormsModule],
+  imports: [MovieCardComponent, FormsModule, AutoFocusDirective],
   styleUrl: './home.component.css',
   template: `
     <div>
       <div>
         <input
+          appAutoFocus
           type="text"
           [ngModel]="search()"
           (ngModelChange)="search.set($event)"

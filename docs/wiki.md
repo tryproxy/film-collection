@@ -24,6 +24,8 @@
 
 - `ng g pipe features/film-details/human-readable-duration-time-format`
 
+- `ng g d features/home/auto-focus`
+
 ## Essentials
 
 ### routing
@@ -56,6 +58,15 @@
 ### Injectable
 
 [link](https://angular.dev/essentials/dependency-injection)
+
+### Directives
+
+- [directives](https://angular.dev/guide/directives/attribute-directives)
+- [api](https://angular.dev/api/core/Directive)
+
+### ElementRef
+
+- [link](https://angular.dev/api/core/ElementRef)
 
 ---
 
