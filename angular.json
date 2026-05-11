@@ -12,7 +12,7 @@
       "schematics": {
         "@schematics/angular:component": {
           "inlineStyle": false,
-          "inlineTemplate": true,
+          "inlineTemplate": false,
           "skipTests": true,
           "type": "component"
         },
