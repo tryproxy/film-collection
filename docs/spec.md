@@ -135,44 +135,44 @@ Below is a checklist to help you verify your work before submission.
 
 ### Components
 
-- [ ] Film card accepts data via `input()`
-- [ ] Film card notifies parent via `output()`
-- [ ] Film list is rendered using `@for`
-- [ ] Conditional rendering via `@if` ("Nothing found")
-- [ ] Details page shows full film information
-- [ ] Header, Breadcrumbs, and Footer are present on every page
+- [x] Film card accepts data via `input()`
+- [x] Film card notifies parent via `output()`
+- [x] Film list is rendered using `@for`
+- [x] Conditional rendering via `@if` ("Nothing found")
+- [x] Details page shows full film information
+- [x] Header, Breadcrumbs, and Footer are present on every page
 
 ### Routing
 
-- [ ] At least 2 routes configured
-- [ ] Navigation via `routerLink`
-- [ ] URL parameter is correctly read on the details page
-- [ ] Wildcard route is handled
+- [x] At least 2 routes configured
+- [x] Navigation via `routerLink`
+- [x] URL parameter is correctly read on the details page
+- [x] Wildcard route is handled
 
 ### Directive
 
-- [ ] Custom attribute directive created as standalone
-- [ ] Sets focus on the element when it appears
-- [ ] Applied to the search field
+- [x] Custom attribute directive created as standalone
+- [x] Sets focus on the element when it appears
+- [x] Applied to the search field
 
 ### Pipe
 
-- [ ] Custom pipe created as standalone
-- [ ] Converts minutes into a human-readable duration format
-- [ ] Used in the template of at least one component
+- [x] Custom pipe created as standalone
+- [x] Converts minutes into a human-readable duration format
+- [x] Used in the template of at least one component
 
 ### Service and Signals
 
-- [ ] Service is registered globally
-- [ ] Data is stored in `signal()`
-- [ ] Filtering is implemented via `computed()`
-- [ ] Search by title works
+- [x] Service is registered globally
+- [x] Data is stored in `signal()`
+- [x] Filtering is implemented via `computed()`
+- [x] Search by title works
 
 ### Code Quality
 
-- [ ] TypeScript strict mode enabled
-- [ ] No linter errors
-- [ ] Code is organized into logical folders
+- [x] TypeScript strict mode enabled
+- [x] No linter errors
+- [x] Code is organized into logical folders
 - [x] Project README is filled in (description, how to run)
 
 ---

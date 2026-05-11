@@ -13,8 +13,18 @@
 - `ng g c shared/components/layout`
 - `ng g c shared/components/header`
 - `ng g c shared/components/footer`
+- `ng g c shared/components/main`
+- `ng g c features/home/movie-card`
+- `ng g c features/not-found`
+- `ng g c features/about`
+- `ng g c shared/components/breadcrumbs`
 
 - `ng g s core/services/films`
+- `ng g s core/services/breadcrumbs`
+
+- `ng g pipe features/film-details/human-readable-duration-time-format`
+
+- `ng g d features/home/auto-focus`
 
 ## Essentials
 
@@ -48,6 +58,15 @@
 ### Injectable
 
 [link](https://angular.dev/essentials/dependency-injection)
+
+### Directives
+
+- [directives](https://angular.dev/guide/directives/attribute-directives)
+- [api](https://angular.dev/api/core/Directive)
+
+### ElementRef
+
+- [link](https://angular.dev/api/core/ElementRef)
 
 ---
 
